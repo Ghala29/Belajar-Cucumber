@@ -44,7 +44,7 @@ import cucumber.api.java.en.When
 
 
 class LoginSteps {
-	
+
 	@Given("User navigates to login page")
 	def navigateToLoginPage(){
 		println ("\n I am inside navigateToLoginPage")
@@ -56,9 +56,9 @@ class LoginSteps {
 		println ("\n I am inside enterCredentials")
 		println ("Username : "+username)
 		println ("Password : "+password)
-		
+
 		WebUI.setText(findTestObject('Object Repository/Page_OrangeHRM/input_Username_username'), username)
-		
+
 		WebUI.setEncryptedText(findTestObject('Object Repository/Page_OrangeHRM/input_Password_password'), password)
 	}
 	@And("Click on login button")
@@ -70,7 +70,7 @@ class LoginSteps {
 	def verifyHomePage() {
 		println("\n I am inside home page")
 		WebUI.verifyElementPresent(findTestObject('Object Repository/Page_OrangeHRM/a_Dashboard'), 5)
+		WebUI.takeScreenshot()
 		WebUI.closeBrowser()
-		
 	}
 }

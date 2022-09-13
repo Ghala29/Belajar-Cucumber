@@ -29,5 +29,7 @@ WebUI.click(findTestObject('Object Repository/Page_OrangeHRM/button_Login'))
 
 WebUI.verifyElementPresent(findTestObject('Object Repository/Page_OrangeHRM/a_Dashboard'), 5)
 
+WebUI.takeScreenshot()
+
 WebUI.closeBrowser()
 
